@@ -49,46 +49,29 @@ public class _12764_ { // 싸지방에 간 준하
 		result.add(1);
 		check[1] = true;
 		computer.add(new int[] { queue.poll()[1], 1 });
-		boolean flag = false;
-
 		while (!queue.isEmpty()) {
 			int temp[] = queue.poll();
 			int idx = Integer.MAX_VALUE;
 			while (!computer.isEmpty() && computer.peek()[0] < temp[0]) {
-				flag = true;
 				check[computer.poll()[1]] = false;
 			}
-			if (flag) {
-				for (int i = 1; i < n + 1; i++) {
-					if (!check[i]) {
-						idx = i;
-						break;
-					}
+			
+			for (int i = 1; i < n + 1; i++) {
+				if (!check[i]) {
+					idx = i;
+					check[idx]=true;
+					break;
 				}
-				flag = false;
 			}
-
-			if (idx != Integer.MAX_VALUE) {
+			
+			if (result.size() > idx) {
 				result.set(idx, result.get(idx) + 1);
-				check[idx] = true;
-				computer.add(new int[] { temp[1], idx });
 			} else {
-				for (int i = 1; i < n + 1; i++) {
-					if (!check[i]) {
-						idx = i;
-						check[idx] = true;
-						break;
-					}
-				}
-				if (result.size() > idx) {
-					result.set(idx, result.get(idx) + 1);
-				} else {
-					result.add(1);
-				}
-				computer.add(new int[] { temp[1], idx });
+				result.add(1);
 			}
+			computer.add(new int[] { temp[1], idx });
 		}
-		
+
 		bw.write(result.size() - 1 + "\n");
 		for (int i = 1; i < result.size(); i++) {
 			bw.write(result.get(i) + " ");
