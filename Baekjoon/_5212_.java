@@ -33,7 +33,8 @@ public class _5212_ { // 지구 온난화
 
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
-				check(i, j);
+				if(arr[i][j]=='X')
+					check(i, j);
 			}
 		}
 
