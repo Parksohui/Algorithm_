@@ -24,7 +24,7 @@ public class _14225_ { // 부분수열의 합
 		}
 		Arrays.sort(arr);
 
-		for (int i = 1; i <= n; i++) {
+		for (int i = 2; i <= n; i++) {
 			answer = new int[i];
 			search(i, 0, 0);
 		}
