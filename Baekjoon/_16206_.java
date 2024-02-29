@@ -38,15 +38,13 @@ public class _16206_ { // 롤케이크
 		while (m > 0 && !queue.isEmpty()) {
 			int num = queue.poll();
 
-			if (num > 10) {
-				num -= 10;
+			num -= 10;
+			answer += 1;
+			m -= 1;
+			if (num == 10) {
 				answer += 1;
-				m -= 1;
-				if (num == 10) {
-					answer += 1;
-				} else if (num > 10) {
-					queue.add(num);
-				}
+			} else if (num > 10) {
+				queue.add(num);
 			}
 		}
 		System.out.println(answer);
