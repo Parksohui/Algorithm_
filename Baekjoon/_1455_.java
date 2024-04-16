@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 public class _1455_ { // 뒤집기 II
 	static boolean arr[][];
-	static int maxX, maxY;
+	static int x, y;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -18,35 +18,35 @@ public class _1455_ { // 뒤집기 II
 
 		int result = 0;
 
-		maxX = -1;
-		maxY = -1;
+		x = -1;
+		y = -1;
 		for (int i = 0; i < n; i++) {
 			String str = bf.readLine();
 			for (int j = 0; j < m; j++) {
 				if (str.charAt(j) == '1') {
 					arr[i][j] = true;
-					maxX = i;
-					maxY = j;
+					x = i;
+					y = j;
 				}
 			}
 		}
 
-		while (maxX != -1 && maxY != -1) {
+		while (x != -1 && y != -1) {
 			result += 1;
-			convert(maxX, maxY);
+			convert(x,y);
 			check();
 		}
 		System.out.println(result);
 	}
 
 	private static void check() {
-		maxX = -1;
-		maxY = -1;
+		x = -1;
+		y = -1;
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[0].length; j++) {
 				if (arr[i][j]) {
-					maxX = i;
-					maxY = j;
+					x = i;
+					y = j;
 				}
 			}
 		}
