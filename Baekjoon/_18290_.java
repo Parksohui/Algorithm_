@@ -50,21 +50,18 @@ public class _18290_ { // NM과 K (1)
 				if (visited[i][j]) {
 					continue;
 				}
-				int cnt = 0;
-				int temp = 0;
+				boolean flag=false;
 				for (int l = 0; l < 4; l++) {
 					int a = i + dx[l];
 					int b = j + dy[l];
 					if (a >= 0 && a < arr.length && b >= 0 && b < arr[0].length) {
-						temp += 1;
-						if (!visited[a][b]) {
-							cnt += 1;
-						} else {
+						if (visited[a][b]) {
+							flag=true;
 							break;
-						}
+						} 
 					}
 				}
-				if (cnt == temp) {
+				if (!flag) {
 					visited[i][j] = true;
 					search(k - 1, sum + arr[i][j]);
 					visited[i][j] = false;
