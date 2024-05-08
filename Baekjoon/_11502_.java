@@ -13,6 +13,8 @@ public class _11502_ { // 세 개의 소수 문제
 		int t = Integer.parseInt(bf.readLine());
 
 		boolean arr[] = new boolean[1000];
+		arr[0] = true;
+		arr[1] = true;
 		for (int i = 2; i < 501; i++) {
 			if (!arr[i]) {
 				for (int j = i + i; j < 1000; j += i) {
@@ -25,9 +27,9 @@ public class _11502_ { // 세 개의 소수 문제
 			int k = Integer.parseInt(bf.readLine());
 			boolean flag = false;
 
-			for (int a = 2; a < k; a++) {
+			for (int a = 2; a <= k; a++) {
 				if (!arr[a]) {
-					for (int b = a; b < k - a; b++) {
+					for (int b = a; b <= k - a; b++) {
 						if (!arr[b]) {
 							if (!arr[k - a - b]) {
 								bw.write(a + " " + b + " " + (k - a - b) + "\n");
