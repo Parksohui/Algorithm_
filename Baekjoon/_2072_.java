@@ -25,6 +25,11 @@ public class _2072_ { // 오목
 			} else {
 				arr[x][y] = 2;
 			}
+			
+			if (i < 10) {
+				continue;
+			}
+			
 			boolean temp = check(x, y, arr[x][y]);
 			if (temp) {
 				flag = true;
