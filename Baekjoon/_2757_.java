@@ -10,8 +10,8 @@ public class _2757_ { // 엑셀
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		char alphabet[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-				'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+		char alphabet[] = { 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+				'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y' };
 		String str = "";
 		while (!(str = bf.readLine()).equals("R0C0")) {
 			String arr[] = str.split("R|C");
@@ -19,11 +19,10 @@ public class _2757_ { // 엑셀
 			String temp = "";
 			int num = Integer.parseInt(arr[2]);
 			while (num > 0) {
+				temp += alphabet[(num % 26)];
 				if (num % 26 == 0) {
-					temp += 'Z';
 					num = (num / 26) - 1;
 				} else {
-					temp += alphabet[(num % 26) - 1];
 					num /= 26;
 				}
 			}
