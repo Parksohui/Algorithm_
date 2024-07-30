@@ -28,9 +28,7 @@ public class _5619_ { // 세 번째
 			}
 			Collections.sort(result);
 			if (result.size() > 3) {
-				if (temp == -1) {
-					temp = result.get(2);
-				} else if (temp == result.get(2)) {
+				if (temp == result.get(2)) {
 					break;
 				} else {
 					temp = result.get(2);
