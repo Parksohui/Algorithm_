@@ -19,7 +19,7 @@ public class _4921_ { // 나무 블록
 					flag = true;
 					break;
 				}
-				if (str.charAt(i) == '1') {
+				if (str.charAt(i) == '1' || str.charAt(i) == '3') {
 					if (str.charAt(i + 1) == '4' || str.charAt(i + 1) == '5') {
 						continue;
 					} else {
@@ -29,13 +29,6 @@ public class _4921_ { // 나무 블록
 				} else if (str.charAt(i) == '2') {
 					flag = true;
 					break;
-				} else if (str.charAt(i) == '3') {
-					if (str.charAt(i + 1) == '4' || str.charAt(i + 1) == '5') {
-						continue;
-					} else {
-						flag = true;
-						break;
-					}
 				} else if (str.charAt(i) == '4' || str.charAt(i) == '6') {
 					if (str.charAt(i + 1) == '2' || str.charAt(i + 1) == '3') {
 						continue;
