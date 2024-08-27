@@ -16,7 +16,7 @@ public class _9342_ { // 염색체
 		for (int i = 0; i < T; i++) {
 			String str = bf.readLine();
 
-			if (Pattern.matches("^[A-F]?A+F+C+[A-F]?", str)) {
+			if (Pattern.matches("^[A-F]?A+F+C+[A-F]?$", str)) {
 				bw.write("Infected!\n");
 			} else {
 				bw.write("Good\n");
