@@ -38,7 +38,7 @@ public class _6324_ { // URLs
 						bw.write("/");
 					}
 				}
-				if (protocol.length > 1) {
+				if (protocol.length > 2) {
 					for (int j = 2; j < protocol.length; j++) {
 						bw.write("://" + protocol[j]);
 					}
