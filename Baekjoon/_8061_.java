@@ -20,23 +20,20 @@ public class _8061_ { // Bitmap
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 
-		boolean arr[][] = new boolean[n][m];
 		result = new int[n][m];
 
 		for (int i = 0; i < n; i++) {
 			String str = bf.readLine();
 			for (int j = 0; j < m; j++) {
 				if (str.charAt(j) - '0' == 0) {
-					arr[i][j] = true;
 					result[i][j] = Integer.MAX_VALUE;
-				} 
+				}
 			}
 		}
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				if (!arr[i][j]) {
-					arr[i][j] = true;
+				if (result[i][j] == 0) {
 					bfs(i, j);
 				}
 			}
