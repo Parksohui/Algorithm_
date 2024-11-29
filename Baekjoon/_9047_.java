@@ -30,7 +30,7 @@ public class _9047_ { // 6174
 				result += 1;
 				str = Integer.toString(Integer.parseInt(max) - Integer.parseInt(min));
 
-				if (str.length() < 4) {
+				while (str.length() < 4) {
 					str = "0" + str;
 				}
 			}
