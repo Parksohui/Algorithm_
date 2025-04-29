@@ -12,7 +12,7 @@ public class _4335_ { // 숫자 맞추기
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
 
-		int n = 0, start = 0, end = 11, result = 0;
+		int n = 0, start = 0, end = 11;
 		while ((n = Integer.parseInt(bf.readLine())) != 0) {
 			st = new StringTokenizer(bf.readLine());
 
@@ -24,8 +24,6 @@ public class _4335_ { // 숫자 맞추기
 			} else if (b.equals("low")) {
 				start = Math.max(start, n);
 			} else {
-				result = n;
-
 				if (n > start && n < end) {
 					bw.write("Stan may be honest\n");
 				} else {
