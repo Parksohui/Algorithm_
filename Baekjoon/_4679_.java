@@ -27,25 +27,18 @@ public class _4679_ { // The Snail
 			boolean flag = false;
 			while (true) {
 				d += 1;
-				
+
 				p += U;
-				if (p < 0) {
-					flag = true;
-					break;
-				}
 				if (p > H) {
 					break;
 				}
-				
+
 				p -= D;
 				if (p < 0) {
 					flag = true;
 					break;
 				}
-				if (p >= H) {
-					break;
-				}
-				
+
 				U -= l;
 				if (U < 0) {
 					U = 0.0;
