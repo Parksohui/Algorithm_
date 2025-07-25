@@ -29,8 +29,7 @@ public class _15198_ { // NKD
 			}
 		}
 
-		int min = Math.min(list.size() - 1, k - 1);
-		for (int i = min; i >= 0; i--) {
+		for (int i = list.size() - 1; i >= 0; i--) {
 			bw.write(list.get(i) + "\n");
 		}
 		bw.flush();
