@@ -16,7 +16,7 @@ public class _9491_ { // Politics
 
 		String str = "";
 
-		while ((str = bf.readLine()) != null) {
+		while (!(str = bf.readLine()).equals("0 0")) {
 			st = new StringTokenizer(str);
 
 			int n = Integer.parseInt(st.nextToken());
