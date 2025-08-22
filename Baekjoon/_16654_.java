@@ -26,12 +26,8 @@ public class _16654_ { // Generalized German Quotation
 					stack.add(new Character[] { str.charAt(i), stack.peek()[1] });
 					list.add(stack.peek()[1]);
 				} else {
-					Character[] temp = stack.pop();
-					if (temp[1] == '[') {
-						list.add(']');
-					} else {
-						list.add('[');
-					}
+					stack.pop();
+					list.add(']');
 				}
 			}
 		}
