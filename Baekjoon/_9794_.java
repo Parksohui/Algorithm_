@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class _9749_ { // Another Word Sorting
+public class _9794_ { // Another Word Sorting
 	static class Info implements Comparable<Info> {
 		private String word;
 		private int score;
