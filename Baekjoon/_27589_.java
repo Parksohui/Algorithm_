@@ -16,13 +16,10 @@ public class _27589_ { // Streets Ahead
 		int n = Integer.parseInt(st.nextToken());
 		int q = Integer.parseInt(st.nextToken());
 
-		String arr[] = new String[n];
 		HashMap<String, Integer> map = new HashMap<>();
 
 		for (int i = 0; i < n; i++) {
-			arr[i] = bf.readLine();
-
-			map.put(arr[i], i+1);
+			map.put(bf.readLine(), i + 1);
 		}
 
 		for (int i = 0; i < q; i++) {
@@ -31,7 +28,7 @@ public class _27589_ { // Streets Ahead
 			String start = st.nextToken();
 			String end = st.nextToken();
 
-			bw.write((Math.abs(map.get(start)-map.get(end))-1) + "\n");
+			bw.write((Math.abs(map.get(start) - map.get(end)) - 1) + "\n");
 		}
 		bw.flush();
 	}
